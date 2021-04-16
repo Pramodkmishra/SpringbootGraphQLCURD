@@ -1,0 +1,34 @@
+input CustomerInput {
+    firstName: String!
+    lastName:String
+    email:String!
+    gender:String!
+    city:String
+    country:String
+    password1:String!
+    password2:String
+   
+}
+
+type Customer {
+    firstName: String!
+    lastName:String
+    email:String!
+    gender:String!
+    city:String
+    country:String
+    password1:String!
+    password2:String
+   
+}
+type Query {
+        customer(email:String) : Customer
+}
+
+type Mutation {
+        createCustomer(input:CustomerInput) : Customer;
+}
+
+
+
+
